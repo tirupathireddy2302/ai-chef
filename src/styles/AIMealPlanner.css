@@ -1,0 +1,364 @@
+/* =========================
+   AI MEAL PLANNER PREMIUM
+========================= */
+
+.meal-page{
+  padding:30px;
+  max-width:1400px;
+  margin:auto;
+}
+
+.meal-page h1{
+  text-align:center;
+
+  font-size:42px;
+
+  font-weight:800;
+
+  margin-bottom:30px;
+
+  background:linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff9f43
+  );
+
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   Planner Form
+========================= */
+
+.planner-form{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+
+  justify-content:center;
+
+  margin-bottom:35px;
+}
+
+.planner-form input,
+.planner-form select{
+  width:200px;
+  height:55px;
+
+  border:none;
+
+  border-radius:16px;
+
+  padding:0 18px;
+
+  background:white;
+
+  font-size:15px;
+
+  box-shadow:
+    0 6px 18px rgba(
+      0,
+      0,
+      0,
+      .08
+    );
+
+  outline:none;
+}
+
+.planner-form input:focus,
+.planner-form select:focus{
+  box-shadow:
+    0 0 0 3px rgba(
+      255,
+      107,
+      53,
+      .2
+    );
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.planner-form button,
+.meal-actions button{
+  border:none;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:.3s;
+}
+
+.planner-form button:hover,
+.meal-actions button:hover{
+  transform:
+    translateY(-3px);
+}
+
+/* Generate Button */
+
+.planner-form button:last-child{
+  width:220px;
+  height:55px;
+
+  border-radius:16px;
+
+  color:white;
+
+  background:linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff9f43
+  );
+
+  box-shadow:
+    0 10px 25px rgba(
+      255,
+      107,
+      53,
+      .3
+    );
+}
+
+/* =========================
+   Action Buttons
+========================= */
+
+.meal-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+
+  justify-content:center;
+
+  margin-bottom:25px;
+}
+
+.speak-btn,
+.stop-btn,
+.save-ai-btn,
+.pdf-btn,
+.history-btn,
+.grocery-btn{
+  padding:14px 20px;
+
+  border-radius:14px;
+
+  color:white;
+
+  font-size:15px;
+}
+
+/* Individual Colors */
+
+.speak-btn{
+  background:#4caf50;
+}
+
+.stop-btn{
+  background:#f44336;
+}
+
+.save-ai-btn{
+  background:#ff6b35;
+}
+
+.pdf-btn{
+  background:#673ab7;
+}
+
+.history-btn{
+  background:#7b1fa2;
+}
+
+.grocery-btn{
+  background:#2196f3;
+}
+
+/* =========================
+   Results
+========================= */
+
+.meal-results{
+  max-width:1200px;
+  margin:auto;
+}
+
+.meal-output{
+  background:white;
+
+  padding:25px;
+
+  border-radius:24px;
+
+  line-height:1.9;
+
+  box-shadow:
+    0 10px 30px rgba(
+      0,
+      0,
+      0,
+      .08
+    );
+}
+
+/* =========================
+   Meal Cards
+========================= */
+
+.meal-cards{
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        320px,
+        1fr
+      )
+    );
+
+  gap:25px;
+
+  margin-top:25px;
+}
+
+.meal-day-card{
+  background:white;
+
+  border-radius:24px;
+
+  padding:22px;
+
+  box-shadow:
+    0 10px 25px rgba(
+      0,
+      0,
+      0,
+      .08
+    );
+
+  transition:.3s;
+}
+
+.meal-day-card:hover{
+  transform:
+    translateY(-6px);
+}
+
+.meal-day-card h3{
+  color:#ff6b35;
+
+  margin-bottom:15px;
+}
+
+.meal-day-card pre{
+  white-space:pre-wrap;
+
+  font-family:inherit;
+
+  line-height:1.8;
+
+  margin:0;
+}
+
+/* =========================
+   Loading
+========================= */
+
+.loading-spinner{
+  text-align:center;
+
+  margin:30px 0;
+
+  font-size:18px;
+
+  color:#ff6b35;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:768px){
+
+  .meal-page{
+    padding:15px;
+  }
+
+  .meal-page h1{
+    font-size:32px;
+  }
+
+  .planner-form{
+    flex-direction:column;
+  }
+
+  .planner-form input,
+  .planner-form select,
+  .planner-form button{
+    width:100%;
+  }
+
+  .meal-actions{
+    flex-direction:column;
+  }
+
+  .meal-actions button{
+    width:100%;
+  }
+
+  .meal-cards{
+    grid-template-columns:1fr;
+  }
+
+}
+.history-btn{
+  width:180px;
+  height:55px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:linear-gradient(
+    135deg,
+    #7b1fa2,
+    #9c27b0
+  );
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  box-shadow:
+    0 8px 20px rgba(
+      123,
+      31,
+      162,
+      .25
+    );
+}
+
+.history-btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(
+      123,
+      31,
+      162,
+      .35
+    );
+}

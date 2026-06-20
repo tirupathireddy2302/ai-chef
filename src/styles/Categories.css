@@ -1,0 +1,8 @@
+.category-card{
+  cursor:pointer;
+  transition:.3s;
+}
+
+.category-card:hover{
+  transform:translateY(-8px);
+}

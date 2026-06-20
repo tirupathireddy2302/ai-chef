@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.history-page{
+  min-height:100vh;
+
+  padding:40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff7f3,
+      #ffffff
+    );
+}
+
+.history-page h1{
+  font-size:3rem;
+
+  font-weight:800;
+
+  margin-bottom:25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b35,
+      #ff9f43
+    );
+
+  -webkit-background-clip:text;
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-input{
+  width:100%;
+
+  max-width:450px;
+
+  height:58px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:18px;
+
+  padding:0 20px;
+
+  font-size:16px;
+
+  margin-bottom:30px;
+
+  background:white;
+
+  box-shadow:
+    0 10px 25px rgba(
+      0,
+      0,
+      0,
+      .08
+    );
+}
+
+/* =========================
+   GRID
+========================= */
+
+.history-list{
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(320px,1fr)
+    );
+
+  gap:25px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.history-card{
+  background:white;
+
+  border-radius:24px;
+
+  padding:25px;
+
+  transition:.35s;
+
+  box-shadow:
+    0 12px 30px rgba(
+      0,
+      0,
+      0,
+      .08
+    );
+}
+
+.history-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(
+      0,
+      0,
+      0,
+      .12
+    );
+}
+
+.history-card h3{
+  font-size:22px;
+
+  color:#222;
+
+  margin-bottom:15px;
+}
+
+.history-card p{
+  margin:10px 0;
+
+  color:#666;
+
+  font-size:15px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.history-actions{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-top:20px;
+}
+
+.history-actions button{
+  border:none;
+
+  padding:12px 18px;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.view-btn{
+  background:#4caf50;
+  color:white;
+}
+
+.view-btn:hover{
+  background:#43a047;
+  transform:translateY(-2px);
+}
+
+.pdf-btn{
+  background:#ff9800;
+  color:white;
+}
+
+.pdf-btn:hover{
+  background:#f57c00;
+  transform:translateY(-2px);
+}
+
+.delete-btn{
+  background:#f44336;
+  color:white;
+}
+
+.delete-btn:hover{
+  background:#d32f2f;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty-history{
+  background:white;
+
+  padding:80px 30px;
+
+  border-radius:30px;
+
+  text-align:center;
+
+  box-shadow:
+    0 10px 25px rgba(
+      0,
+      0,
+      0,
+      .08
+    );
+}
+
+.empty-history h2{
+  font-size:2rem;
+
+  margin-bottom:12px;
+
+  color:#222;
+}
+
+.empty-history p{
+  color:#777;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay{
+  position:fixed;
+
+  inset:0;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      .65
+    );
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:999;
+}
+
+.modal-content{
+  width:90%;
+
+  max-width:850px;
+
+  max-height:85vh;
+
+  overflow-y:auto;
+
+  background:white;
+
+  border-radius:30px;
+
+  padding:30px;
+
+  position:relative;
+
+  box-shadow:
+    0 25px 60px rgba(
+      0,
+      0,
+      0,
+      .25
+    );
+}
+
+.close-modal{
+  position:absolute;
+
+  top:18px;
+  right:18px;
+
+  width:45px;
+  height:45px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#f44336;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.close-modal:hover{
+  transform:rotate(90deg);
+}
+
+.meal-plan-view{
+  margin-top:25px;
+
+  white-space:pre-wrap;
+
+  line-height:2;
+
+  color:#444;
+
+  font-size:15px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.modal-content::-webkit-scrollbar{
+  width:8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb{
+  background:#ff6b35;
+  border-radius:20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .history-page{
+    padding:20px;
+  }
+
+  .history-page h1{
+    font-size:2.2rem;
+  }
+
+  .history-list{
+    grid-template-columns:1fr;
+  }
+
+  .history-actions{
+    flex-direction:column;
+  }
+
+  .history-actions button{
+    width:100%;
+  }
+
+  .modal-content{
+    width:95%;
+    padding:20px;
+  }
+
+  .search-input{
+    max-width:100%;
+  }
+}

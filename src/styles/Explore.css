@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   EXPLORE PAGE
+========================= */
+
+.explore-page{
+  max-width:1400px;
+
+  margin:0 auto;
+
+  padding:35px;
+
+  min-height:100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff8f5 0%,
+      #ffffff 100%
+    );
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.explore-top{
+  margin-bottom:30px;
+}
+
+.explore-back-btn{
+  border:none;
+
+  background:linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff9f43
+  );
+
+  color:white;
+
+  padding:14px 28px;
+
+  border-radius:16px;
+
+  cursor:pointer;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  transition:.3s;
+
+  box-shadow:
+    0 10px 25px rgba(
+      255,
+      107,
+      53,
+      .25
+    );
+}
+
+.explore-back-btn:hover{
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(
+      255,
+      107,
+      53,
+      .35
+    );
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.explore-hero{
+  background:white;
+
+  padding:50px;
+
+  border-radius:32px;
+
+  margin-bottom:50px;
+
+  box-shadow:
+    0 15px 40px rgba(
+      0,
+      0,
+      0,
+      .06
+    );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.explore-hero::before{
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  background:
+    rgba(
+      255,
+      107,
+      53,
+      .08
+    );
+
+  border-radius:50%;
+
+  top:-150px;
+  right:-100px;
+}
+
+.explore-text{
+  position:relative;
+  z-index:2;
+}
+
+.explore-text h1{
+  font-size:4rem;
+
+  font-weight:800;
+
+  margin-bottom:18px;
+
+  line-height:1.1;
+
+  background:linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff9f43
+  );
+
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.explore-text p{
+  font-size:1.1rem;
+
+  color:#666;
+
+  max-width:700px;
+
+  line-height:1.8;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.categories-section,
+.recommended-section{
+  background:white;
+
+  padding:30px;
+
+  border-radius:28px;
+
+  margin-top:40px;
+
+  box-shadow:
+    0 10px 30px rgba(
+      0,
+      0,
+      0,
+      .05
+    );
+}
+
+/* =========================
+   HEADERS
+========================= */
+
+.section-header{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:30px;
+
+  padding-bottom:15px;
+
+  border-bottom:
+    1px solid #f1f1f1;
+}
+
+.section-header h2{
+  font-size:2rem;
+
+  font-weight:700;
+
+  color:#222;
+}
+
+.section-header span{
+  color:#ff6b35;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.section-header span:hover{
+  color:#e85b29;
+
+  transform:
+    translateX(3px);
+}
+
+/* =========================
+   CARD EFFECT
+========================= */
+
+.category-card,
+.recipe-card{
+  transition:.3s;
+}
+
+.category-card:hover,
+.recipe-card:hover{
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 15px 35px rgba(
+      0,
+      0,
+      0,
+      .10
+    );
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .explore-page{
+    padding:20px;
+  }
+
+  .explore-hero{
+    padding:30px 25px;
+  }
+
+  .explore-text h1{
+    font-size:2.6rem;
+  }
+
+  .explore-text p{
+    font-size:1rem;
+  }
+
+  .section-header{
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+  }
+
+  .section-header h2{
+    font-size:1.5rem;
+  }
+
+  .categories-section,
+  .recommended-section{
+    padding:20px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .explore-text h1{
+    font-size:2.1rem;
+  }
+
+  .explore-back-btn{
+    width:100%;
+  }
+
+}

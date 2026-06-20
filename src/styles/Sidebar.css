@@ -1,0 +1,171 @@
+/* =========================
+   PREMIUM SIDEBAR
+========================= */
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 30px 20px;
+  border-right: 1px solid #ececec;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+
+  box-shadow:
+    4px 0 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+
+.logo {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 45px;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff8f5a
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Menu Item */
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  text-decoration: none;
+
+  color: #444;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 16px;
+
+  transition: all 0.3s ease;
+
+  white-space: nowrap;
+}
+
+/* Hover */
+
+.nav-item:hover {
+  background: linear-gradient(
+    135deg,
+    #fff3ed,
+    #ffe7db
+  );
+
+  color: #ff6b35;
+
+  transform: translateX(6px);
+
+  box-shadow:
+    0 6px 15px rgba(
+      255,
+      107,
+      53,
+      0.15
+    );
+}
+
+/* Active */
+
+.nav-item.active {
+  background: linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff8f5a
+  );
+
+  color: white;
+
+  box-shadow:
+    0 10px 20px rgba(
+      255,
+      107,
+      53,
+      0.3
+    );
+}
+
+/* Icons */
+
+.nav-item svg {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* Scrollbar */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ff6b35;
+  border-radius: 10px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 85px;
+    padding: 20px 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 14px 10px;
+  }
+
+  .nav-item span {
+    display: none;
+  }
+
+  .nav-item svg {
+    font-size: 24px;
+  }
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  text-decoration: none;
+  color: #444;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-item span {
+  white-space: nowrap;
+}
